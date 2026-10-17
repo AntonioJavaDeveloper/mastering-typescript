@@ -1,0 +1,15 @@
+{
+  "name": "HTML-CSS Course",
+  "dockerFile": "Dockerfile",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "usernamehw.errorlens",
+          "eamodio.gitlens",
+          "PKief.material-icon-theme"
+      ]
+    }
+  }
+}
