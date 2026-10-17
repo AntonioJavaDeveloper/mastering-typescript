@@ -73,15 +73,33 @@ The examples in this repository can be accessed either through Git or by manuall
 
 If Git is not installed on your machine, you can also obtain the examples in this repository by manually downloading the source code from GitHub.
 
-To do so, click the green **Code** button and then select **Download ZIP** (see the bottom of the image below).
+The download will include all files from the current chapter in a compressed archive that you can simply extract. Therefore, it is important to identify which chapter you are viewing before downloading the project.
+
+At the top of the page, locate the repository name link, as illustrated in the image below. The repository name is `mastering-typescript`, highlighted in blue. Do not click this link just yet. However, you should know that clicking the `mastering-typescript` repository name link will redirect you to the chapter's main page.
+
+![Breadcrumb English](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/main/breadcrumb-en-GB.png)
+
+Once you return to the main page, you will see a list of files. Simply click the `README.md` file to return to this documentation.
+
+As an exercise, click the `mastering-typescript` link to return to the chapter's main page. When the file listing appears, select `README.md` to return to this guide.
+
+In the example above, the user is viewing the `README.md` file. You can also view and switch chapters using GitHub's branch selector. Each chapter is organized in a separate branch.
+
+![List of Branches](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/main/list-of-branches-chapters.png)
+
+Each branch represents a single chapter.
+
+The `main` branch is the primary branch of this repository and corresponds to the first chapter in the documentation. This is our first chapter. As shown in the image, the `main` branch is highlighted, which means you are currently on the `main` branch. To switch branches, or chapters, simply browse the available options.
+
+Your goal is to reach the main page of the `main` branch. You already know how to get there: simply click the blue `mastering-typescript` link. On the main page, look for the green **Code** button. Clicking this button will open a menu with several options. Simply click **Download ZIP** to download the chapter's files.
 
 ![Download the Repository](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/main/download-button.png)
 
-After downloading, extract the archive into a directory of your choice and open the project folder in Visual Studio Code.
+After downloading, extract the archive into a directory of your choice. Navigate to the extracted directory and open the project folder in Visual Studio Code.
 
-From this point on, you can follow all the examples in the documentation without needing to install or use Git.
+From this point on, you can follow all the examples presented in this guide without needing to install or use Git. Each chapter has its own branch. **Therefore, you will need to download the files again whenever you want to follow another chapter without using Git.** Remember that each chapter corresponds to a different branch. Select the desired chapter using the branch selector.
 
-If you are using a terminal and want to open the project in Visual Studio Code, navigate to the extracted directory and run the following command:
+If you are using a terminal and want to open the project in Visual Studio Code, navigate to the newly extracted directory and run the following command:
 
 ```bash
 code .

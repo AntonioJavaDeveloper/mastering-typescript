@@ -73,13 +73,31 @@ Os exemplos deste repositório podem ser acessados tanto através do Git quanto 
 
 Caso o Git não esteja instalado em sua máquina, os exemplos deste repositório também podem ser obtidos através do download manual disponibilizado pelo GitHub.
 
-Para isso, clique no botão verde **Code** e depois clique na opção **Download ZIP** (veja a parte inferior da imagem abaixo).
+O download que será realizado contemplará todos os arquivos do capítulo corrente. Será disponibilizado em um arquivo compactado, bastando descompactá-lo. Então é importante identificar em qual capítulo você está navegando antes do download do projeto.
+
+Na parte superior da página, localize o link do nome do repositório, conforme ilustrado na imagem abaixo. O nome do repositório é `mastering-typescript` destacado em azul. Ainda não clique nesse link. Mas é preciso que você saiba que ao clicar no link do nome do repositório, `mastering-typescript`, você será redirecionado para a página inicial do capítulo.
+
+![Breadcrumb Português](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/main/breadcrumb-pt-BR.png)
+
+Ao retornar para a página inicial você verá uma relação de arquivos. Basta clicar no arquivo `README.pt-BR.md` para retornar para essa documentação.
+
+Como exercício clique no link `mastering-typescript` para voltar para página inicial do capítulo. Quando ver a listagem dos arquivos escolha `README.pt-BR.md` para voltar para esse guia.
+
+No exemplo acima, o usuário está visualizando o arquivo `README.pt-BR.md`. Também é possível verificar e alterar o capítulo acessando o seletor de branches do GitHub. Cada capítulo está organizado em uma branch.
+
+![Lista de Branches](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/main/list-of-branches-chapters.png)
+
+Cada branch representa um único capítulo.
+
+É a branch principal deste repositório e corresponde ao primeiro capítulo disponibilizado na documentação. Nosso primeiro capítulo. Perceba pela imagem que é a branch `main` que esta destacada, logo você está na branch main. Para mudar de branch, ou capítulo, basta navegar entre as opções disponíveis.
+
+Seu objetivo é chegar na página inicial da branch `main`. Você já sabe chegar na página inicial, basta clicar no link azul `mastering-typescript`. Na página inicial procure um botão verde **Code**. Ao clicar nesse botão verde será aberto uma caixa com várias opções. Basta clicar na opção **Download ZIP** para baixar os arquivos do capítulo.
 
 ![Download do Repositório](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/main/download-button.png)
 
-Após o download, descompacte o arquivo em um diretório de sua preferência e abra a pasta do projeto utilizando o Visual Studio Code.
+Após o download, descompacte o arquivo em um diretório de sua preferência. Acesse o diretório descompactado e abra a pasta do projeto utilizando o Visual Studio Code.
 
-A partir desse ponto, será possível acompanhar todos os exemplos apresentados na documentação sem a necessidade de instalar ou utilizar o Git.
+A partir desse ponto, será possível acompanhar todos os exemplos apresentados nesse guia sem a necessidade de instalar ou utilizar o Git. Cada capítulo possui sua própria branch. ***Portanto, será necessário realizar um novo download sempre que desejar acompanhar outro capítulo sem utilizar Git***. Lembre-se cada capítulo é uma branch diferente. Escolha o capítulo no seletor de branch.
 
 Caso esteja utilizando algum tipo de terminal e deseje abrir o projeto no Visual Studio Code, entre no diretório recém descompactado e depois digite o comando abaixo:
 
