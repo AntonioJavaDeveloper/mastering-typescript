@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/AntonioJavaDeveloper/mastering-typescript#readme",
   "devDependencies": {
-    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
     "typescript": "^7.0.2"
   }
 }
