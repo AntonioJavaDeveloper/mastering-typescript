@@ -7,7 +7,7 @@
 ## 🧭 Navegação
 
 📂 [`README principal do repositório`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.pt-BR.md)  
-└── 📁 [`Introdução do capítulo`](../README.pt-BR.md)  
+└── 📁 [`Introdução do capítulo`](./README.pt-BR.md)  
 &emsp;&emsp;├── [`01 — O que é TypeScript?`](./1-o-que-e-typescript.pt-BR.md)  
 &emsp;&emsp;└── [`02 — Primeira Execução de uma Aplicação TypeScript`](./2-primeira-execucao.pt-BR.md) ← **você está aqui**
 
@@ -340,7 +340,7 @@ Toda colaboração construtiva será analisada com atenção.
 
 ⬅️ Retornar à [`01 — O que é TypeScript?`](./1-o-que-e-typescript.pt-BR.md)
 
-➡️ Avançar para [Capítulo 02 — Ambiente TypeScript e Gerenciamento de Dependências](https://github.com/AntonioJavaDeveloper/mastering-typescript/tree/02-typescript-environment-and-dependencies)
+➡️ Avançar para [Capítulo 02 — Ambiente TypeScript e Gerenciamento de Dependências](https://github.com/AntonioJavaDeveloper/mastering-typescript/tree/02-typescript-environment-and-dependencies/docs/02-typescript-environment-and-dependencies/README.pt-BR.md)
 
 🏠 Retornar ao [README principal do repositório](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.pt-BR.md)
 

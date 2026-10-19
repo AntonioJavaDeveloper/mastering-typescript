@@ -10,7 +10,7 @@
 ## 🧭 Navegação
 
 📂 [`README principal do repositório`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.pt-BR.md)  
-└── 📁 [`Introdução do capítulo`](../README.pt-BR.md)  
+└── 📁 [`Introdução do capítulo`](./README.pt-BR.md)  
 &emsp;&emsp;├── [`01 - O que é TypeScript?`](./1-o-que-e-typescript.pt-BR.md) ← **você está aqui**  
 &emsp;&emsp;└── [`02 - Primeira Execução de uma Aplicação TypeScript`](./2-primeira-execucao.pt-BR.md)
 
@@ -246,7 +246,7 @@ Toda colaboração construtiva será analisada com atenção.
 
 ## 🔗 Navegação Rápida
 
-⬅️ Retornar à [introdução do capítulo](../README.pt-BR.md)
+⬅️ Retornar à [introdução do capítulo](./README.pt-BR.md)
 
 ➡️ Avançar para [`02 - Primeira Execução de uma Aplicação TypeScript`](./2-primeira-execucao.pt-BR.md)
 
