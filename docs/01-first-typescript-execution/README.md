@@ -10,8 +10,8 @@
 
 📂 [`Repository Main README`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.md)  
 └── 📁 [`Chapter Introduction`](./README.md) ← **You are here**  
-&emsp;&emsp;├── [`01 - What Is TypeScript?`](./docs/1-what-is-typescript.md)  
-&emsp;&emsp;└── [`02 - First TypeScript Execution`](./docs/2-first-typescript-execution.md)
+&emsp;&emsp;├── [`01 - What Is TypeScript?`](./1-what-is-typescript.md)  
+&emsp;&emsp;└── [`02 - First Execution of a TypeScript Application`](./2-first-typescript-execution.md)
 
 ---
 
@@ -70,9 +70,9 @@ All constructive contributions will be carefully reviewed.
 
 ## 🔗 Quick Navigation
 
-➡️ Continue to [`01 - What Is TypeScript?`](./docs/1-what-is-typescript.md)
+➡️ Continue to [`01 - What Is TypeScript?`](./1-what-is-typescript.md)
 
-⬅️ Return to the [Repository Main README](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.pt-BR.md)
+⬅️ Return to the [`Repository Main README`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.md)
 
 ---
 

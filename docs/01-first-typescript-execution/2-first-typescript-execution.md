@@ -342,9 +342,9 @@ All constructive contributions will be carefully reviewed.
 
 ⬅️ Return to [`01 — What Is TypeScript?`](./1-what-is-typescript.md)
 
-➡️ Continue to [Chapter 02 — TypeScript Environment and Dependency Management](https://github.com/AntonioJavaDeveloper/mastering-typescript/tree/02-typescript-environment-and-dependencies/docs/02-typescript-environment-and-dependencies/README.md)
+➡️ Continue to [`Chapter 02 — TypeScript Environment and Dependency Management`](https://github.com/AntonioJavaDeveloper/mastering-typescript/tree/02-typescript-environment-and-dependencies/docs/02-typescript-environment-and-dependencies/README.md)
 
-🏠 Return to the [Repository Main README](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.md)
+🏠 Return to the [`Repository Main README`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/main/README.md)
 
 ---
 

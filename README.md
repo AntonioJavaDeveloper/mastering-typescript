@@ -190,7 +190,7 @@ Example navigation structure:
 | Chapter | Link to English Content |
 |---|---|
 | 01 - First TypeScript Application Execution | [📘 `01-first-typescript-execution`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/01-first-typescript-execution/docs/01-first-typescript-execution/README.md) |
-| 02 - TypeScript Environment and Dependency Management | [📘 `02-typescript-environment-and-dependencies`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/02-typescript-environment-and-dependencies/docs/01-first-typescript-execution/README.md) |
+| 02 - TypeScript Environment and Dependency Management | [📘 `02-typescript-environment-and-dependencies`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/02-typescript-environment-and-dependencies/docs/02-typescript-environment-and-dependencies/README.md) |
 
 ---
 
