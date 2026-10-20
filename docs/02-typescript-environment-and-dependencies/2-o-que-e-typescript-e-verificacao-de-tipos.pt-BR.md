@@ -26,7 +26,7 @@
 
 No documento anterior, conhecemos JavaScript, ECMAScript, os motores JavaScript e o Node.js. Agora, vamos estudar o TypeScript e entender como ele ajuda a identificar problemas no código antes da execução.
 
-Conhecer JavaScript é importante para compreender TypeScript porque o TypeScript se baseia na linguagem JavaScript, acrescentando recursos voltados principalmente à análise estática e à segurança durante o desenvolvimento.
+Conhecer JavaScript é importante para compreender porque o TypeScript se baseia na linguagem JavaScript, acrescentando recursos voltados principalmente à análise estática e à segurança durante o desenvolvimento.
 
 Neste documento, utilizaremos a classe `Pessoa`, localizada no diretório de código-fonte deste capítulo, para observar como o TypeScript identifica um acesso inválido a uma propriedade privada.
 
@@ -105,9 +105,11 @@ Nem sempre é necessário declarar explicitamente o tipo de uma variável. O Typ
 ```typescript
 const language = "TypeScript";
 const version = 7;
+let nome = "Antonio";
 
 console.log(language);
 console.log(version);
+console.log(nome);
 ```
 
 Nesse exemplo, o TypeScript infere os tipos com base nos valores atribuídos às constantes.
@@ -116,10 +118,13 @@ Nesse exemplo, o TypeScript infere os tipos com base nos valores atribuídos às
 |---|---|
 | `const language = "TypeScript"` | Literal `"TypeScript"` |
 | `const version = 7` | Literal `7` |
+| `let nome = "Antonio"` | string `"Antonio"` |
 
-Em declarações com `const`, o TypeScript pode inferir tipos literais, mais específicos do que simplesmente `string` ou `number`. Em outros contextos, como variáveis declaradas com `let`, a inferência pode resultar em tipos mais amplos.
+Em declarações com `const`, o TypeScript pode inferir tipos literais, mais específicos do que simplesmente `string` ou `number`. Em outros contextos, como variáveis declaradas com `let`, a inferência pode resultar em tipos mais amplos como `string`.
 
 A inferência reduz a necessidade de anotações repetitivas sem eliminar a verificação de tipos.
+
+Não se preocupe caso não tenha entendido o que são literais. Esse não é o foco. Basta saber que mesmo não colocando explicitamente o tipo da variável ou constante o TypeScript vai inferir um tipo para aquela variável ou constante.
 
 ### 🏗️ Classes, propriedades e modificadores de acesso
 
@@ -192,16 +197,16 @@ Essa diferença será importante no exemplo da classe `Pessoa`.
 
 ### 🧭 Análise estática e execução são coisas diferentes
 
-A análise estática examina o código sem precisar executar o programa para verificar determinadas propriedades, incluindo compatibilidade de tipos e regras de acesso.
+A **análise estática** *examina o código sem precisar executar o programa para verificar determinadas propriedades*, incluindo compatibilidade de tipos e regras de acesso.
 
-A execução, por outro lado, consiste em realizar as operações do programa em um ambiente de execução.
+A **execução**, por outro lado, *consiste em realizar as operações do programa em um ambiente de execução*.
 
 Por isso, precisamos separar duas perguntas:
 
 - **O TypeScript considera o código válido?** Essa pergunta está relacionada à análise estática e às regras de tipos.
 - **O que acontece quando o código JavaScript é executado?** Essa pergunta está relacionada ao comportamento em tempo de execução.
 
-Um programa pode apresentar um diagnóstico do TypeScript e, ainda assim, ser executado por uma ferramenta que apenas transforma o código e não interrompe a execução por causa daquele diagnóstico.
+Um programa pode apresentar um diagnóstico de erro do TypeScript e, ainda assim, ser executado por uma ferramenta que apenas transforma o código e não interrompe a execução por causa daquele diagnóstico.
 
 ### 👤 Conhecendo a classe `Pessoa`
 
@@ -355,11 +360,11 @@ Com essa configuração, o acesso ao nome completo respeita as regras de acesso 
 
 Agora, experimente o seguinte:
 
-1. Descomente a linha que acessa `cliente.primeiroNome`.
-2. Observe o diagnóstico exibido pelo VS Code.
-3. Execute o arquivo com `tsx`, conforme o comando de execução utilizado no capítulo.
-4. Compare o diagnóstico do editor com o comportamento observado no terminal.
-5. Comente novamente a linha de acesso direto e mantenha o acesso por meio do getter.
+1. Descomente a linha que acessa `cliente.primeiroNome`. Nesse momento você esta acessando um atributo privado
+2. Observe o diagnóstico exibido pelo VS Code. Irá aparecer uma mensagem que algo esta errado.
+3. Execute o arquivo com `tsx`, conforme o comando de execução utilizado no capítulo. `npx tsx src/02-typescript-environment-and-dependencies/Pessoa.ts`
+4. Compare o diagnóstico do editor com o comportamento observado no terminal. Ainda que esteja apresentando uma mensagem de erro o código foi executado. Ou seja, ainda que a etapa de checagem estática identifique uma inconsistência o código é transpilado.
+5. Volte o código como estava antes. Comente a linha que acessa `cliente.primeiroNome`. Mantenha a linha do acesso por meio do getter descomentada.
 
 Como `private` tradicional do TypeScript não é uma barreira de execução, o código transformado pode conseguir ler a propriedade em tempo de execução. O resultado concreto dependerá das linhas que estiverem descomentadas.
 
@@ -397,15 +402,82 @@ Não precisamos aprofundar agora o funcionamento do npm, do `npx` ou da estrutur
 
 ### 🧪 Verificando o arquivo `Pessoa.ts`
 
+Nesse momento o arquivo `src/02-typescript-environment-and-dependencies/Pessoa.ts` encontra-se com a linha de acesso a propriedade privada comentada. Se não estiver comentada comente.
+
+```typescript
+// console.log(`Meu primeiro nome é ${cliente.primeiroNome}`);
+```
+
+Sabemos que `cliente.nome` é público. E a linha de acesso a `cliente.nome` deve permanecer descomentada.
+
+```typescript
+// console.log(`Meu primeiro nome é ${cliente.primeiroNome}`);
+console.log(`Meu nome completo é ${cliente.nome}`)
+```
+
 No terminal, na raiz do repositório, execute:
 
 ```bash
 npx tsc --noEmit src/02-typescript-environment-and-dependencies/Pessoa.ts
 ```
 
-Esse comando solicita ao compilador que verifique o arquivo indicado, sem emitir arquivos JavaScript.
+Esse comando solicita ao compilador que verifique o arquivo indicado, sem emitir arquivos JavaScript, ou seja, não irá ocorrer a transpilação do código TypeScript em código JavaScript. Esse comando somente irá fazer as checagens estáticas no código TypeScript informado.
 
-O caminho precisa corresponder à estrutura real do repositório.
+O caminho precisa corresponder à estrutura real do repositório até chegar no arquivo em questão. 
+
+Perceba que a execução do comando não vai retornar nenhuma saída. Mas será que essa execução não retorna nenhuma informação? Queremos saber se o comando obteve saída com sucesso ou teve falha.
+
+Embora o TypeScript e o VS Code tenham sido criados pela Microsoft, imensa maioria dos ambientes de produção que rodam TypeScript hoje é baseada em Linux. Então a explicação dessa seção será baseada nesse ecossistema.
+
+Um *exit code* (ou *código de retorno*) **é um número inteiro enviado por um programa ou comando ao sistema operacional assim que ele termina de ser executado.** Esse número serve como uma resposta automática para dizer ao sistema operacional — ou a quem chamou o programa — se a tarefa foi realizada com sucesso ou se ocorreu algum erro.
+
+No **Linux**, todo comando retorna um número ao finalizar:
+
+- ` 0 ` significa sucesso (o comando funcionou perfeitamente).
+- *Qualquer número diferente de zero (como 1, 2, 127, etc.) significa erro (o comando falhou por algum motivo).*
+
+A variável especial `$?` armazena o *código de retorno* (ou *exit code*) do último comando executado no terminal Linux. Para ver o retorno do último comando, você deve usar o comando `echo $?`. Caso esteja no linux digite a sequência dos dois comandos abaixo. Caso esteja utilizando Microsoft Windows só acompanhe a explicação que ainda assim é muito importante.
+
+```bash
+npx tsc --noEmit src/02-typescript-environment-and-dependencies/Pessoa.ts
+echo $?
+```
+
+Veja que a saída será `0`:
+
+```bash
+npx tsc --noEmit src/02-typescript-environment-and-dependencies/Pessoa.ts
+echo $?
+0
+```
+
+É retornado internamento um código de sucesso pelo `npx tsc --noEmit src/02-typescript-environment-and-dependencies/Pessoa.ts`, ainda que não possamos ver.
+
+Agora, no arquivo `src/02-typescript-environment-and-dependencies/Pessoa.ts`, comente a linha que acessa um membro público `cliente.nome` e descomente a linha que acessa um membro privado, `cliente.primeiroNome`. Deverá ocorrer um erro. Veja o código abaixo:
+
+```typescript
+console.log(`Meu primeiro nome é ${cliente.primeiroNome}`);
+//console.log(`Meu nome completo é ${cliente.nome}`)
+```
+
+Agora digite somente o comando abaixo.
+
+```bash
+npx tsc --noEmit src/02-typescript-environment-and-dependencies/Pessoa.ts
+```
+Você verá algo parecido com:
+
+![Visual Studio Code indicando o acesso inválido à propriedade privada](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/02-typescript-environment-and-dependencies/tsc-script-message-error-terminal-output.png)
+
+*Figura 1 — O erro identificado pelo Visual Studio Code e o retorno no terminal.*
+
+Realizamos uma checagem estática. O desenvolvedor consegue analisar qual erro ocorreu. O ponto é que essa informação *não* é um indicativo de sucesso ou falha. O *exit code*(ou *código de retorno*) é o indicativo de sucesso ou falha para o Sistema Operacional ou outro sistema que esta se utilizando do *Compilador do TypeScript*. Já sabemos que `0` indica sucesso e qualquer número diferente de zero indica que houve falha. Para analisar o *exit code* do camando anterior devemos executar o comando `echo $?`. Veja a imagem abaixo:
+
+![Visual Studio Code indicando o acesso inválido à propriedade privada](https://raw.githubusercontent.com/AntonioJavaDeveloper/assets/refs/heads/main/mastering-typescript/02-typescript-environment-and-dependencies/tsc-script-message-error-terminal-output-exit-code-1.png)
+
+*Figura 2 — Exit code para o comando anterior.*
+
+Veja na figura anterior, na parte de baixo, a saída do comando `echo $?` foi `1`, indicando erro ou falha.
 
 A opção `--noEmit` impede a geração de arquivos de saída. Ela não desativa a análise estática: o compilador continua verificando o código e pode apresentar diagnósticos.
 
@@ -417,7 +489,7 @@ Quando executamos o `tsc` informando diretamente um arquivo na linha de comando,
 npx tsc --noEmit src/02-typescript-environment-and-dependencies/Pessoa.ts
 ```
 
-o compilador trata esse arquivo como uma entrada explícita. Nessa situação, ele não utiliza automaticamente as configurações definidas no `tsconfig.json` do projeto da mesma forma que utilizaria em uma verificação do projeto inteiro.
+o compilador trata esse arquivo como uma entrada explícita. Nessa situação, ele não utiliza as configurações definidas no `tsconfig.json` do projeto da mesma forma. É comum configurar no arquivo `tsconfig.json` para fazer uma verificação do projeto inteiro. Mas adiante nesse capítulo aprenderemos como fazer essa verificação de todos os arquivos do projeto.
 
 Em outras palavras, passar o nome do arquivo no comando pode produzir um comportamento diferente daquele obtido ao executar apenas:
 
