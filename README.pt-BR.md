@@ -189,8 +189,8 @@ Exemplo de estrutura de navegação:
 
 | Capítulo                                              | Link para o conteúdo em português                                                                                                                                                                                      |
 |-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 01 - Primeira Execução de uma Aplicação TypeScript    | [📘 `01-first-typescript-execution`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/01-first-typescript-execution/README.pt-BR.md)                                                               |
-| 02 - Ambiente TypeScript e Gerenciamento de Dependências | [📘 `02-typescript-environment-and-dependencies`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/02-typescript-environment-and-dependencies/README.pt-BR.md)                                     |
+| 01 - Primeira Execução de uma Aplicação TypeScript    | [📘 `01-first-typescript-execution`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/01-first-typescript-execution/docs/01-first-typescript-execution/README.pt-BR.md)                                                               |
+| 02 - Ambiente TypeScript e Gerenciamento de Dependências | [📘 `02-typescript-environment-and-dependencies`](https://github.com/AntonioJavaDeveloper/mastering-typescript/blob/02-typescript-environment-and-dependencies/docs/02-typescript-environment-and-dependencies/README.pt-BR.md)                                     |
 
 ---
 
